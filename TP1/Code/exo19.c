@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+
+//Ceci est un approfondissement du TP 1
+
 int main(){
     int a,b,c; //Les trois coefficients de l'équation ax²+bx+c
     printf("Entrez les coefficients de l'équation ax²+bx+c, a,b,c:\n");
