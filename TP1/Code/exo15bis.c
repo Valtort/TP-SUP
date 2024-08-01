@@ -15,5 +15,6 @@ int main(){
             printf("Cas B\n");
         }
     }
+    //Voir le pdf pour les différents cas.
     return 0;
 }
