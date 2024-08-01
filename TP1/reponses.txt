@@ -1,0 +1,35 @@
+Exercice 3
+Question 5 : on voit tout les fichiers, même ceux qui commencent par un point, je pense que -a signifie "all".
+
+Exercice 4
+1) On voit l'archive ainsi que le dossier du tp.
+
+Exercice 7
+Question 2) Il n'y a pas de retour à la ligne !
+
+Exercice 9 
+Question 1) Le programme afficherait : J'ai acheté 15 t-shirts à 6.99 euros.
+Question 2) Le programme affiche : J'ai acheté 15 t-shirts à 6.990000 euros
+Je me suis trompé, tout les résultats sont donc affiché avec 6 chiffres après la virgule.
+
+Exercice 10 
+On peut diviser deux entiers pour formé un flottant. Et si la variable stockant la division est un int, on ne prend que la partie entière.
+
+Exercice 11
+On peut sommer un entier et un flottant mais il faut le stocker dans un flottant.
+
+Exercice 12
+Question 1) Le programme demande à l'utilisateur 2 entiers qu'il va ensuite sommer.
+
+Exercice 14 
+
+if signifie "si", else signifie "sinon"
+Ce programme nous dit si y est plus grand que x.
+
+Exercice 17 
+Q1) Oui le nombre tient sur un int, et le problème surgira en 2038 (Il s'agit du bug de l'an 2038).
+Q2) On peut utiliser ce format jusqu'à l'an 292 279 027 179.
+
+Exercice 18
+Q1) Les nombres obtenues sont pseudo-aléatoires.
+Q2) Si on exécute le programme plusieurs fois en une seconde, on obtient les mêmes nombres
