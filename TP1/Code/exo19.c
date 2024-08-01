@@ -18,6 +18,6 @@ int main(){
             printf("Les deux solutions sont : %d + i*%f et %d - i*%f \n",-1*b/(2*a), sqrt(-delta)/(2*a), -1*b/(2*a), sqrt(-delta)/(2*a) );
         }
     }
-
+    // Affiche les solutions de l'équation
     return 0;
 }
