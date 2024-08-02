@@ -1,0 +1,39 @@
+Exercice 1
+On dirait que 0 correspond à False, et tout les autres nombres correspondent à True.
+
+x y x&&y x||y
+0 0  0    0 
+0 1  0    1
+1 0  0    1
+1 1  1    1
+
+Exercice 4 
+Avec -3, l'assertion échoue !
+
+Exercice 8
+Q3) Une recherche par dichotomie semble être idéal pour gagné au juste prix !
+
+Exercice 11
+Q2) 
+1 : 34
+2 : 4
+3 : 4
+4 : 2
+
+Q3)
+1 : 0
+2 : 10
+3 : 111
+4 : 18
+5 : 107
+6 : 350
+
+Q4)
+1 : 9
+2 : 97
+3 : 871
+4 : 6171
+5 : 77031
+Pour le 6 et le 7, on a un dépassement d'entier qui nous empêche de répondre à la question.
+
+Q5) On ne peut donc pas connaitre le temps nécessaire.
