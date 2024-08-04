@@ -1,0 +1,52 @@
+Exercice 1)
+Voici les 12 erreurs :
+l26 il y avait un int z en trop dans les paramètres de la fonction
+l28 ne renvoie rien, je rajoute return
+l31 ne renvoie rien, je rajoute return
+l40, il y avait un int t=3 inutile
+l57, il manquait le "int" de int main
+l63 il n'y avait pas de & dans le scanf
+l56, il y avait un return 0; pour un fonction de type void
+l47, il y avait marqué ++j et non j++
+l68, idem avec i
+l73, on appel rand() mais on a pas include time.h ni stdlib.h
+l68, le assert était placé avant le scanf, donc il n'avait pas de valeur
+l76, il y avait est_pair(a, 0) à la place de est_pair(a)
+
+Exercice 2)
+x et y sont distants de 4 octets, c'est-à-dire que chacun sont codés sur 4 octets, soit 32 bits ce qui est logique pour le type int.
+
+Exercice 4)
+On obtient une erreur de segmentation car on essaye de déréférencer le pointeur NULL.
+
+Exercice 7)
+Q1) Le tableau est de type int*.
+
+Exercice 10 :
+Q1) 
+a) 
+a correspond à 97.
+z correspond à 122.
+A correspond à 65.
+Z correspond à 90.
+	
+b)
+Le chiffre 0 correspond à 48.
+Le chiffre 9 correspond à 57.
+	
+c) \ correspond à 92.
+	
+d) \n correspond à 10.
+	
+Q2)
+a) 0x20 correspond à 2.
+b) 0x28 correspond à (.
+c) 0x29 correspond à ).
+
+Exercice 11:
+Q1) Si un mot dépasse 20 caractères, le code fonctionne quand même, il doit surement réécrire des valeurs en dehors de la partie de la mémoire assignée à buf, on peut imaginer qu'en mettant une suite de caractères assez grandes, on pourrait surcharger la mémoire.
+
+Q2) Le programme devrait afficher SAULT. Le programme renvoie SAULT.
+	
+Q3) Pour str1, le caractère nul est écrasé par ' ', de même pour str2, de ce fait il est décalé au rang suivant du tableau. 
+	
