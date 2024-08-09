@@ -1,0 +1,4 @@
+Exercice 1)
+Q1) Les caractère Hexadécimaux 0x34, 0x30, 0x0a correspondent à 4, 0, \n
+
+Q2) Le fichier contient 4 octets, 0x28, 0x00, 0x00, 0x00 qui correspondent à ( puis null, null, null.
