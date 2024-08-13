@@ -94,6 +94,40 @@ void ajout_debut(liste_t* l, int x){
 }
 
 // APPROFONDISSEMENT : 
+//Recherche un élément x et dans la liste l, supprime le premier maillon
+//où celui-ci apparait.
+void suppr(liste_t* l, int x){
+    if(l->tete->valeur == x){
+        maillon_t* suiv = l->tete->suivant;
+        free(l->tete);
+        l->tete = suiv;
+    }
+    else{
+        maillon_t* maillon_prec = l->tete; 
+        maillon_t* maillon_actuelle = l->tete->suivant;
+        maillon_t* maillon_suiv = maillon_actuelle->suivant;
+        while(maillon_actuelle != NULL){
+            if(maillon_suiv == NULL && maillon_actuelle->valeur == x){
+                free(maillon_actuelle); // On n'a pas besoin de "raccordé", on supprime juste le maillon
+                maillon_prec->suivant = NULL;
+                maillon_actuelle = NULL; // Pour sortir de la boucle
+            }
+            else{
+                if(maillon_actuelle->valeur == x){
+                    free(maillon_actuelle);
+                    maillon_prec->suivant = maillon_suiv;
+                    maillon_actuelle = NULL;
+                }
+                else{
+                    maillon_prec = maillon_prec->suivant;
+                    maillon_actuelle = maillon_actuelle->suivant;
+                    maillon_suiv = maillon_suiv->suivant;
+                }
+            }
+        }
+    }
+}
+
 
 int main(){
 
@@ -103,6 +137,13 @@ int main(){
     printf("%d\n", recherche(10,l));
     ajout_fin(l, 88);
     ajout_debut(l, 77);
+    print_liste(l);
+    suppr(l, 88);
+    print_liste(l);
+    suppr(l, 77);
+    print_liste(l);
+    ajout_fin(l, 2);
+    suppr(l, 2);
     print_liste(l);
     free_liste(l);
     return 0;   
