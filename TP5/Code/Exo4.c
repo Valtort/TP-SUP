@@ -29,19 +29,14 @@ typedef struct LIVRE livre_t;
 choix_t* generer_choix(FILE* f){
     choix_t* choix = malloc(sizeof(choix_t));
     long unsigned int n = 800;
-    // char* lecture = malloc(800*sizeof(char));
 
     choix->texte = malloc(800*sizeof(char));
     int len = getline(&choix->texte, &n, f);
-    
-    // lecture[len-1] = '\0';
-    // strcpy(choix->texte, lecture);
 
     fscanf(f, "%d", &choix->page_suivante);
     char poubelle;
     fscanf(f, "%c", &poubelle); //supprime le '\n'
 
-    // free(lecture);
     return choix;
 }
 
@@ -59,12 +54,8 @@ page_t* generer_page(FILE* f){
 
     page->n_choix = n_choix;
 
-    // char* lecture = malloc(400*sizeof(char));
-
     page->texte = malloc(800*sizeof(char));
     int len = getline(&page->texte, &n, f);
-    // lecture[len-1] = '\0';
-    // strcpy(page->texte, lecture);
 
     choix_t** choix = malloc((n_choix+1)*sizeof(choix_t*));// on fait +1 pour ne pas avoir de problèmes lors du cas n_choix = 0
 
@@ -73,7 +64,6 @@ page_t* generer_page(FILE* f){
         choix[i] = generer_choix(f);
     }
     page->choix = choix;
-    // free(lecture);
     return page;
 }
 
