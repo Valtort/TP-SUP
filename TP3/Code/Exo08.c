@@ -1,10 +1,11 @@
 /**** JEU DU TRI ****/
-/* [Consignes à effacer et à remplacer par un commentaire de documentation]
- * - Commencez par lire l'intégralité du code et des commentaires;
- * - Implémentez les 4 fonctions en suivant leur documentation, en n'oubliant
- *   pas les tests ni les assertions;
- * - Enfin, complétez le main en utilisant les 4 fonctions.
- */
+
+
+/*Ce programme a pour but d'implémenter le jeu du tri celui-ci consiste :
+- On demande à l'utilisateur une taille de tableau 
+- On génère un tableau avec des valeurs aléatoires entre 0 et 50 
+- L'utilisateur indique 2 cases à échanger
+- Le but est de trier le tableau avec le moins de coups possibles !*/
 
 
 #include <stdio.h>
@@ -61,19 +62,11 @@ void random_tab(int* t, int n){
 int main()
 {
 	srand(time(NULL));
-
-	/*** TESTS: cette partie sert à tester vos fonctions au fur et à mesure que vous les codez.
-	 *   Il faudra bien penser à commenter tout le code de cette partie une fois que le programme
-	 *   fonctionne comme vous voulez, afin de ne pas polluer l'affichage pour l'utilisateur ! ***/	
 	// tests est_trie
 	int t1[5] = {1, 2, 3, 5, 4};
 	assert(!est_trie(t1, 5)); // le tableau n'est pas trié
 	assert(est_trie(t1, 4)); // les 4 premières cases sont bien triées
-
-
-
 	// tests print_tab (pas besoin d'assert ici, on se contente de constater visuellement à l'exécution)
-    
     print_tab(t1, 5);
     random_tab(t1, 5);
     print_tab(t1, 5);
