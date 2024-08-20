@@ -11,20 +11,6 @@ point de vue de l'utilisateur. */
 #include <assert.h>
 #include <stdbool.h>
 
-typedef struct liste {
-   struct maillon* tete;
-   struct maillon* queue;
-   int taille;
-} liste_t;
-
-typedef struct maillon {
-   int val;
-   struct maillon* suiv;
-   struct maillon* prec;
-   liste_t* mere;
-} maillon_t;
-
-
 liste_t* liste_vide(){
    liste_t* l = malloc(sizeof(liste_t));
    l->tete = malloc(sizeof(maillon_t));
@@ -48,7 +34,7 @@ void print_liste(liste_t* l){
    maillon_t* m = l->tete->suiv; 
    //jusqu'à atteindre la sentinelle de queue
    while (m->suiv != NULL){
-      printf("%d", m->val);
+      printf("(k: %s,v: %s)", m->val->cle, m->val->valeur);
       // mettre une double flèche s'il reste un vrai maillon à afficher
       if (m->suiv->suiv != NULL){
          printf(" <-> ");
@@ -74,7 +60,7 @@ bool est_sentinelle(maillon_t* m){
    //Car une CNS pour être une sentinelle est de pointé NULL à gauche ou à droite
 }
 
-void ajout_avant(liste_t* l, int x){
+void ajout_avant(liste_t* l, cv_t* x){
    maillon_t* m = malloc(sizeof(maillon_t));
    m->mere = l;
    m->val = x;
@@ -85,7 +71,7 @@ void ajout_avant(liste_t* l, int x){
    l->taille++;
 }  
 
-void ajout_arriere(liste_t* l, int x){
+void ajout_arriere(liste_t* l, cv_t* x){
    maillon_t* m = malloc(sizeof(maillon_t));
    m->mere = l;
    m->val = x;
@@ -96,7 +82,7 @@ void ajout_arriere(liste_t* l, int x){
    l->taille++;
 }  
 
-int recup_value(maillon_t* m){
+cv_t* recup_value(maillon_t* m){
    assert(m!=NULL);
    assert(!est_sentinelle(m));
    return m->val;
@@ -130,7 +116,7 @@ maillon_t* recup_prec(maillon_t* m){
    return NULL;
 }  
 
-void insertion(maillon_t* m, int x){
+void insertion(maillon_t* m, cv_t* x){
    assert(m->suiv != NULL);
    maillon_t* s = m->suiv;
    maillon_t* new = malloc(sizeof(maillon_t));
@@ -157,11 +143,11 @@ void suppr(maillon_t* m){
    free(m);
 }
 
-void ajout_avant_bis(liste_t* l, int x){
+void ajout_avant_bis(liste_t* l, cv_t* x){
    insertion(l->tete,x);
 }
 
-void ajout_arriere_bis(liste_t* l, int x){
+void ajout_arriere_bis(liste_t* l, cv_t* x){
    insertion(l->queue->prec,x);
 }
 
