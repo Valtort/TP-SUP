@@ -58,11 +58,11 @@ void set(dict_t* d, char* k, char* v){
 	else{
 		maillon_t* m = recup_avant(d->chaine); 
 		while(m != NULL){
-		cv_t* c = recup_value(m); 
-		if (strcmp(c->cle, k) == 0){
-			(m->val)->valeur = v;
-		}
-		m = recup_suiv(m); 
+			cv_t* c = recup_value(m); 
+			if (strcmp(c->cle, k) == 0){
+				(m->val)->valeur = v;
+			}
+			m = recup_suiv(m); 
 		}
 	}
 }
@@ -72,6 +72,7 @@ bool doublons(char** tab, int n){
 	dict_t* d = dico_vide();
 	for(int i=0; i<n; i++){
 		if(in(d, tab[i])){
+			print_liste(d->chaine);
 			free_liste(d->chaine);
 			free(d);
 			return true; // Car il existe j appartenant à [0,n-1] tq T[j]=T[i]

@@ -49,6 +49,9 @@ void free_liste(liste_t* l){
    maillon_t* m = l->tete;
    while (m != NULL){
       maillon_t* prochain = m->suiv;
+      if(!est_sentinelle(m)){
+         free(m->val);
+      }
       free(m);
       m = prochain;
    }

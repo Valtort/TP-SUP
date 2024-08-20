@@ -11,4 +11,5 @@ int main(){
     tab[2] = "Oliver";
     tab[3] = "Guillaume";
     assert(doublons(tab, 4));
+    free(tab);
 }
