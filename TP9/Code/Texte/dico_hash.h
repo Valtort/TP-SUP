@@ -6,6 +6,13 @@ Interface de dictionnaire.*/
 #include "keyval.h"
 #include <stdbool.h>
 
+struct hashtable{
+	int m; // nombre d'alvéoles
+	int n; // nombre d'entrées
+	chain_t** t; // table de hachage: chaque case i contient la liste
+	             // des clés hachées à la valeur i
+};
+
 typedef struct hashtable hashtable_t;
 
 /*Créer une table de hachage vide*/

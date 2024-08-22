@@ -1,6 +1,12 @@
-#include "dico_hash.h"
+#ifndef KVGUARD
 #include "dico_chaine.h"
+#endif
+#ifndef KEY_H
 #include "keyval.h"
+#endif
+#ifndef HASH_H
+#include "dico_hash.h"
+#endif
 
 /* TABLES DE HACHAGE AVEC CHAINAGE 
 Dictionnaires implémentés par des tables de hachage.
@@ -25,12 +31,13 @@ stockant les différentes clés hashés vers cette alvéole.
 #define ALPHA_HIGH 0.5
 #define RESIZE_FACTOR 2.0/(ALPHA_LOW+ALPHA_HIGH)
 
-struct hashtable{
-	int m; // nombre d'alvéoles
-	int n; // nombre d'entrées
-	chain_t** t; // table de hachage: chaque case i contient la liste
-	             // des clés hachées à la valeur i
-};
+// struct hashtable{
+// 	int m; // nombre d'alvéoles
+// 	int n; // nombre d'entrées
+// 	chain_t** t; // table de hachage: chaque case i contient la liste
+// 	             // des clés hachées à la valeur i
+// };
+//A été déplacé dans le .h
 
 
 /* Remplace *d par une nouvelle table contenant les mêmes éléments, de façon 
