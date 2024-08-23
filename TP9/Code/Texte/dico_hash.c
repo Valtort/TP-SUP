@@ -141,7 +141,9 @@ void hash_free(hashtable_t* d){
 void hash_print(hashtable_t* d){
 	for (int i = 0; i < d->m; ++i)
 	{
+		printf("%dième tableau : \n", i+1);
 		chain_print(d->t[i]);
+		
 	}
 }
 
