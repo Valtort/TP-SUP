@@ -1,0 +1,13 @@
+Ex1 
+
+Q2) First et second
+Q3) Oui on peut écrire divise 3, il s'agit d'une fonction qui test si un chiffre est multiple de 3.
+Q6) La fonction Id est de type 'a donc on peut donner n'importe quelle type et on renverra le même type.
+
+Ex2
+
+Q3) On prédit
+10
+0
+4
+105
